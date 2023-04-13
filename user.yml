@@ -5,4 +5,7 @@
       block:
         - name: Reboot
           shell: reboot
+#          не ожидаем пока сервер прервет connection
+          async: 1000
+          poll: 0
       become: true
