@@ -1,0 +1,16 @@
+---
+web:
+  hosts:
+    beget2i:
+      ansible_host: 45.146.164.55
+      ansible_user: root
+      ansible_connection: ssh
+      ansible_ssh_private_key_file: ~/.ssh/yandex/id_rsa.pem
+#        /mnt/c/users/gena6/.ssh/yandex/id_rsa
+local:
+  hosts:
+    webserver3:
+      ansible_host: 192.168.1.11
+      ansible_user: myuser
+      ansible_port: 22
+      my_custom_var: anothervalue

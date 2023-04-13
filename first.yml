@@ -1,0 +1,6 @@
+---
+- name: First test
+  hosts: beget2
+  inventory: ./inventory/inv.yml
+  tasks:
+    - action: ping
