@@ -38,4 +38,5 @@
         state: absent
       ignore_errors: true
       delegate_to: localhost
+#      чтобы post tags исполнялась важно включать туда необходимые теги
       tags: swarm_join
