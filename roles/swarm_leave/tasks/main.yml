@@ -11,7 +11,17 @@
   retries: 30
   delay: 2
   until: result.host_info.ContainersRunning == 0
+#  выполняем на удаляемом хосте
   delegate_to: "{{ node_name }}"
+
+- name: Debug
+  debug:
+    msg: "{{ result }}"
 
 - name: Удаление ноды
   command: "docker node rm {{ node_name }} --force"
+#
+# так не работает
+#  community.docker.docker_swarm:
+#    state: remove
+#    node_id: "{{ node_name }}"
