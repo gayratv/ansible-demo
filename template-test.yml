@@ -1,0 +1,10 @@
+---
+# ansible-playbook -i inventory template-test.yml
+# ansible-playbook  -i inventory  template-test.yml --vault-password-file ~/gayrat/.pass
+# ansible-playbook  -i cluster template-test.yml --vault-password-file ~/gayrat/.pass
+- name: Deploy / build server
+  hosts: deploy
+  tasks:
+    - name: MSG
+      debug:
+        msg: "Hello"

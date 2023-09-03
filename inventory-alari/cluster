@@ -1,5 +1,5 @@
 [deploy]
-server1 ansible_host=127.0.0.1 ansible_user=vagrant ansible_port=2223
+server1 ansible_host=212.113.120.139 ansible_user=root  ansible_become_password=host_deploy.host_password
 
 [managers]
 server2 ansible_host=127.0.0.1 ansible_user=vagrant ansible_port=2224

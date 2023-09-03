@@ -1,0 +1,26 @@
+---
+all:
+  children:
+    deploy:
+      hosts:
+        master:
+          ansible_host: 212.113.120.139
+    worker:
+      hosts:              
+        ans3:
+          ansible_host: 95.214.62.52
+        ans2:
+          ansible_host: 188.225.79.161
+    managers:
+      hosts:
+        ans10:
+          ansible_host: 95.214.62.52
+
+  vars:
+#    ansible_user: docker
+    ansible_user: root
+    ansible_connection: ssh
+    ansible_ssh_private_key_file: "~/.ssh/ansible/id_rsa.priv"
+    ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
+    ansible_python_interpreter: "/usr/bin/python3"    
+    
